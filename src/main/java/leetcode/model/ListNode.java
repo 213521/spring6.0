@@ -8,10 +8,18 @@ package main.leetcode.model;
  */
 public class ListNode {
 
-    public int val;
+    public Integer val;
     public ListNode next;
 
     public ListNode(int val) {
+        this.val = val;
+    }
+
+    public Integer getVal() {
+        return val;
+    }
+
+    public void setVal(Integer val) {
         this.val = val;
     }
 }
