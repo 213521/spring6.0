@@ -20,7 +20,23 @@ public class Offer {
 
     public static void main(String[] args) {
 
-        int[] a = new int[]{1, 2, -1, -2, 2, 1, -2, 1, 4, -5, 4};
+        System.out.println(test());
+    }
+
+    public static int test(){
+        int i = 1;
+        try{
+            i++;
+            System.out.println("try block, i = "+i);
+            return i;
+        }catch(Exception e){
+            i ++;
+            System.out.println("catch block i = "+i);
+            return i;
+        }finally{
+            i = 10;
+            System.out.println("finally block i = "+i);
+        }
     }
 
     /**
@@ -253,8 +269,9 @@ public class Offer {
      * 示例 2:
      * 输入: [0,0,1,2,5]
      * 输出: True
+     * 22300
      */
-    public boolean isStraight(int[] nums) {
+    public static boolean isStraight(int[] nums) {
         Set<Integer> set = new HashSet<>();
         int min = 14;
         int max = 0;
